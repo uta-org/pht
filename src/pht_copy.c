@@ -781,7 +781,8 @@ static zval *copy_zval_table(zval *old_table, int count)
                     ZVAL_NULL(new_table + i);
                     break;
                 default:
-                    ZEND_ASSERT(0);
+                    return NULL;
+                    // ZEND_ASSERT(0);
             }
         }
     }
